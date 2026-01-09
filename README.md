@@ -1,11 +1,9 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/logo-lockup-cmyk-red.svg" width="280" alt="Laravel Logo">
-</p>
+
 
 <h1 align="center">ASDM Associates</h1>
 
 <p align="center">
-  Website profil & dashboard administrasi untuk firma hukum <strong>ASDM Associates</strong>, dibangun menggunakan Laravel dengan arsitektur modern dan panel admin berbasis Filament.
+  Website profil & dashboard  untuk firma hukum <strong>ASDM Associates</strong>, dibangun menggunakan Laravel dengan arsitektur modern dan panel admin berbasis Filament.
 </p>
 
 <p align="center">
@@ -70,4 +68,10 @@ Project ini dirancang **siap hosting** dan mengikuti best practice Laravel untuk
 ---
 
 ## 📂 Struktur Direktori Utama
-
+- app/ → Logic aplikasi
+- resources/views/ → Blade templates
+- routes/ → Routing web
+- storage/app/public → File upload (via symlink)
+- public/ → Public assets
+- config/ → Konfigurasi Laravel
+ 
