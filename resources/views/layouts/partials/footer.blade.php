@@ -43,7 +43,7 @@
             +62 812-3456-7890
           </a>
 
-          <a href="https://instagram.com/asdmassociates"
+          <a href="https://instagram.com/saridamayanti_associates"
              target="_blank" rel="noopener"
              class="group flex items-center gap-2 hover:text-emerald-900 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-slate-500 group-hover:text-emerald-900"
