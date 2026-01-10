@@ -29,7 +29,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                     d="M21.75 6.75v10.5A2.25 2.25 0 0 1 19.5 19.5h-15A2.25 2.25 0 0 1 2.25 17.25V6.75m19.5 0L12 13.5 2.25 6.75" />
             </svg>
-            info@asdmassociates.com
+            saridamayantilawoffice@gmail.com
           </a>
 
           <a href="https://wa.me/6281234567890"
@@ -55,7 +55,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                     d="M17.25 6.75h.008v.008h-.008V6.75Z" />
             </svg>
-            @asdmassociates
+            @saridamayanti_associates
           </a>
         </div>
       </div>
@@ -74,15 +74,11 @@
           </svg>
 
           <p class="leading-relaxed">
-            Jl. Contoh Raya No. 123, Kel. Contoh, Kec. Contoh,<br>
-            Kota Jakarta Selatan, DKI Jakarta 12345
+            Jalan MT Haryono No 43. Kelurahan Damai, Bahagia, Kec. Balikpapan Kota,<br>
+            Kota Balikpapan, Kalimantan Timur 76114
+
           </p>
         </div>
-
-        {{-- optional: jam kerja --}}
-        <p class="mt-3 text-xs uppercase tracking-wide text-slate-500">
-          Senin–Jumat · 08.00–17.00
-        </p>
       </div>
 
     </div>
