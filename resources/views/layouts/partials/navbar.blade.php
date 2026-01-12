@@ -104,14 +104,14 @@
         >
           <div class="px-4 py-4 space-y-1 text-sm">
             <a @click="close()" class="block rounded-xl px-3 py-2 text-emerald-900 hover:bg-emerald-50 hover:text-emerald-950 transition" href="{{ route('home') }}">Beranda</a>
-            <a @click="close()" class="block rounded-xl px-3 py-2 text-emerald-900 hover:bg-emerald-50 hover:text-emerald-950 transition" href="{{ route('about') }}">Tentang Kami</a>
             <a @click="close()" class="block rounded-xl px-3 py-2 text-emerald-900 hover:bg-emerald-50 hover:text-emerald-950 transition" href="{{ route('services') }}">Layanan</a>
             <a @click="close()" class="block rounded-xl px-3 py-2 text-emerald-900 hover:bg-emerald-50 hover:text-emerald-950 transition" href="{{ route('portfolio') }}">Portofolio</a>
             <a @click="close()" class="block rounded-xl px-3 py-2 text-emerald-900 hover:bg-emerald-50 hover:text-emerald-950 transition" href="{{ route('gallery') }}">Galeri</a>
 
+
             {{-- ✅ Member mobile juga route --}}
             <a @click="close()" class="block rounded-xl px-3 py-2 text-emerald-900 hover:bg-emerald-50 hover:text-emerald-950 transition" href="{{ route('member') }}">Member</a>
-
+            <a @click="close()" class="block rounded-xl px-3 py-2 text-emerald-900 hover:bg-emerald-50 hover:text-emerald-950 transition" href="{{ route('about') }}">Tentang Kami</a>
             <a
               @click="close()"
               class="mt-3 inline-flex w-full justify-center rounded-2xl bg-emerald-950 px-4 py-2.5 font-semibold text-white active:scale-[0.98]"
