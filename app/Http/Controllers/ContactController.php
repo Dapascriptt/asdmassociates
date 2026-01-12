@@ -18,7 +18,7 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        $to = config('mail.from.address', 'contact@asdmassociates.com');
+        $to = config('mail.from.address', 'saridamayantilawoffice@gmail.com');
 
         $body = "Pesan masuk dari formulir kontak ASDM Associates:\n\n"
               . "Nama: {$data['name']}\n"
