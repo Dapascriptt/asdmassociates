@@ -46,6 +46,15 @@ class NewsResource extends Resource
                         Forms\Components\TextInput::make('site_name')
                             ->label('Nama situs')
                             ->maxLength(255),
+                        Forms\Components\FileUpload::make('image_file')
+                            ->label('Upload Gambar (opsional)')
+                            ->image()
+                            ->directory('news')
+                            ->disk('public')
+                            ->visibility('public')
+                            ->imageEditor()
+                            ->columnSpanFull()
+                            ->helperText('Jika mengunggah, gambar ini akan dipakai; jika kosong, gunakan URL gambar.'),
                         Forms\Components\TextInput::make('image')
                             ->label('URL Gambar')
                             ->maxLength(500)

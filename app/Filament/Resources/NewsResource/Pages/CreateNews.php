@@ -13,11 +13,26 @@ class CreateNews extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
+        $state = $this->form->getState();
+        $uploadPath = $state['image_file'] ?? null;
+        $uploadPath = is_array($uploadPath) ? ($uploadPath[0] ?? null) : $uploadPath;
         $og = NewsResource::fetchOgMetadata($data['url'] ?? '');
+
+        // Prioritas gambar: upload lokal > URL manual > OG
+        if (!empty($uploadPath)) {
+            $data['image'] = $uploadPath;
+        } elseif (!empty($data['image'])) {
+            // sudah diisi URL manual, biarkan
+        } else {
+            $data['image'] = $og['image'] ?? null;
+        }
+
+        if (!empty($data['image']) && Str::startsWith($data['image'], 'livewire-file:')) {
+            $data['image'] = null;
+        }
 
         $data['title'] = $data['title'] ?? ($og['title'] ?? parse_url($data['url'], PHP_URL_HOST) ?? 'Berita');
         $data['excerpt'] = $data['excerpt'] ?? (isset($og['description']) ? Str::limit($og['description'], 200) : 'Berita terbaru.');
-        $data['image'] = $data['image'] ?? ($og['image'] ?? null);
         $data['site_name'] = $data['site_name'] ?? ($og['site_name'] ?? parse_url($data['url'], PHP_URL_HOST));
 
         if (empty($data['published_at']) && !empty($og['published_at'])) {
@@ -38,6 +53,8 @@ class CreateNews extends CreateRecord
         if (empty($data['published_at'])) {
             $data['published_at'] = now();
         }
+
+        unset($data['image_file']);
 
         return $data;
     }
