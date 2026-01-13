@@ -155,10 +155,10 @@
             {{ $srv['description'] ?? $srv->description }}
           </p>
 
-          <ul class="mt-5 space-y-2 text-sm text-slate-600">
+          <ul class="mt-5 space-y-3 text-sm text-slate-600">
             @foreach($mapItems($srv['items'] ?? $srv->items ?? []) as $it)
-              <li class="flex gap-3">
-                <span class="mt-2 h-2 w-2 rounded-full bg-emerald-700"></span>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700"></span>
                 <p class="leading-relaxed">{{ $it }}</p>
               </li>
             @endforeach
@@ -195,10 +195,10 @@
             {{ $srv['description'] ?? $srv->description }}
           </p>
 
-          <ul class="mt-5 space-y-2 text-sm text-slate-600">
+          <ul class="mt-5 space-y-3 text-sm text-slate-600">
             @foreach($mapItems($srv['items'] ?? $srv->items ?? []) as $it)
-              <li class="flex gap-3">
-                <span class="mt-2 h-2 w-2 rounded-full bg-emerald-700"></span>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-700"></span>
                 <p class="leading-relaxed">{{ $it }}</p>
               </li>
             @endforeach
