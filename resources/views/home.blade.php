@@ -5,153 +5,57 @@
 @section('meta_image', asset('images/home-og-image.jpg'))
 
 @section('content')
-<section class="relative overflow-hidden">
-  {{-- Background glow --}}
-  <div class="absolute inset-0">
-    <div class="absolute -top-40 -left-10 h-80 w-80 rounded-full bg-emerald-200/50 blur-3xl"></div>
-    <div class="absolute -bottom-52 -right-10 h-96 w-96 rounded-full bg-emerald-300/35 blur-3xl"></div>
-  </div>
+<section class="relative isolate min-h-[640px] overflow-hidden">
+  <img src="{{ asset('images/section1.jpeg') }}" alt="ASDM Associates" class="absolute inset-0 h-full w-full object-cover" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-transparent"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_50%)]"></div>
 
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-    <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-14">
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-24 sm:pt-36 sm:pb-32 lg:pt-44 lg:pb-40">
+    <!-- Main Content Wrapper -->
+    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
 
-      {{-- LEFT --}}
-      <div class="space-y-7">
-        <div class="space-y-4 sm:space-y-6">
-  <h1
-    class="text-4xl font-extrabold leading-tight tracking-tight text-emerald-950 sm:text-5xl"
-  >
-    Firma Hukum Profesional di Balikpapan,
-    <span class="text-emerald-700">Tegas</span>,
-    dan Terpercaya
-  </h1>
-
-  <p
-    class="max-w-2xl text-justify text-base leading-relaxed text-slate-700 sm:text-lg"
-  >
-    A. Sari Damayanti, S.H., M.H. &amp; Associates merupakan firma hukum yang
-    berkedudukan di Balikpapan, menyediakan pendampingan hukum yang terukur,
-    responsif, dan berorientasi pada solusi bagi individu maupun perusahaan.
-  </p>
-</div>
-
-
-        {{-- CTA --}}
-        <div class="flex flex-wrap items-center gap-3">
-          <a href="{{ route('contact') }}" class="btn-primary">
-            Konsultasi Sekarang
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0-5.25-5.25M19.5 12l-5.25 5.25" />
-            </svg>
-          </a>
-
-          <a href="{{ route('services') }}" class="btn-secondary">
-            Lihat Layanan
-          </a>
-        </div>
-
-        {{-- Mini cards --}}
-        @php
-          $cards = [
-            ['title' => 'Konsultasi', 'desc' => 'Terarah & jelas', 'icon' => 'chat'],
-            ['title' => 'Litigasi', 'desc' => 'Strategi kuat', 'icon' => 'gavel'],
-            ['title' => 'Perusahaan', 'desc' => 'Dokumen rapi', 'icon' => 'building'],
-          ];
-        @endphp
-
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          @foreach($cards as $card)
-            <div class="glass-card p-4 ring-1 ring-emerald-900/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-              <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
-                  @if($card['icon'] === 'chat')
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M8.25 9.75h7.5m-7.5 3h4.5M4.5 6.75h15a.75.75 0 0 1 .75.75v8.25a.75.75 0 0 1-.75.75H8.686a.75.75 0 0 0-.53.22l-2.905 2.904A.75.75 0 0 1 4.5 19.5V7.5a.75.75 0 0 1 .75-.75Z" />
-                    </svg>
-                  @elseif($card['icon'] === 'gavel')
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="m14.25 5.25-3 3m-2.5-.5 3 3m.53 1.97 6.72 6.72M4.5 19.5l6.75-6.75M9 5.25l1.5 1.5m-5.25 9L6 16.5" />
-                    </svg>
-                  @else
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M3.75 21h16.5M4.5 3.75H9v5.25H4.5zm0 0H9L3.75 9M9 3.75l5.25 5.25m0 0h5.25V3.75H9zm5.25 0V9m0 6.75H21v-5.25h-6.75zm0 0V21m-5.25 0h5.25v-5.25H9zM3 12h6" />
-                    </svg>
-                  @endif
-                </div>
-
-                <div>
-                  <p class="font-semibold text-emerald-950">{{ $card['title'] }}</p>
-                  <p class="text-sm text-slate-600">{{ $card['desc'] }}</p>
-                </div>
-              </div>
-            </div>
-          @endforeach
-        </div>
-      </div>
-
-      {{-- RIGHT (Refined / less nested cards) --}}
-      <div class="dark-card relative overflow-hidden p-8 sm:p-10">
-        <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/5 blur-3xl"></div>
-
-        {{-- Header --}}
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <p class="text-2xl font-semibold text-white">Kenapa ASDM Associates?</p>
-            <p class="mt-2 text-sm leading-relaxed text-white/70">
-              Pendampingan hukum yang rapi, terukur, dan berorientasi solusi.
-            </p>
-          </div>
-
-          <span class="badge-soft hidden sm:inline-flex">Trust · Strategy · Clarity</span>
-        </div>
-
-        {{-- CTA (no extra card) --}}
-        <div class="mt-8 flex flex-col gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
-          <p class="text-sm text-white/75">
-            Butuh arahan hukum yang jelas? Mulai dari konsultasi singkat.
+      <!-- Left Section: Logo and Text -->
+      <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 w-full lg:w-auto">
+        <div class="text-white animate-[fadeInUp_0.8s_ease]">
+          <p class="text-base sm:text-lg lg:text-xl font-semibold tracking-wide">ASDM Associates</p>
+          <h1 class="mt-1 sm:mt-2 text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
+            Firma Hukum Profesional<br class="hidden sm:block"> Balikpapan
+          </h1>
+          <p class="mt-2 sm:mt-3 lg:mt-4 max-w-2xl text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed">
+            Pendampingan hukum yang tegas, terukur, dan berorientasi solusi bagi individu maupun korporasi.
           </p>
+          <br>
+           <div class="flex flex-row sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto animate-[fadeInUp_1s_ease]">
+        <a href="{{ route('member') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 sm:flex-none sm:min-w-[160px] lg:min-w-[170px] text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
+          <p class="text-xs sm:text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">Anggota & Partner Aktif</p>
+          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">5</p>
+        </a>
 
-          <div class="flex flex-wrap items-center gap-3">
-            <a
-              href="{{ route('contact') }}"
-              class="inline-flex items-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-emerald-950 transition hover:-translate-y-0.5"
-            >
-              Hubungi Kami
-            </a>
-            <span class="text-xs uppercase tracking-wide text-white/60">
-              Senin–Jumat · 08.00–17.00
-            </span>
-          </div>
-        </div>
-
-        {{-- Key benefit (lighter) --}}
-        <div class="mt-6 rounded-2xl bg-white p-5 text-emerald-950 shadow-lg">
-          <div class="flex items-start gap-3">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-800">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M7.5 8.25h9m-9 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-            </div>
-            <div>
-              <p class="text-sm font-semibold">Konsultasi awal yang terarah</p>
-              <p class="mt-1 text-sm text-slate-700">
-                Kami bantu memetakan posisi hukum, risiko, dan langkah yang paling relevan sejak awal.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {{-- Micro trust line --}}
-
+        <a href="{{ route('portfolio') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 sm:flex-none sm:min-w-[160px] lg:min-w-[170px] text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
+          <p class="text-xs sm:text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">Jumlah Kasus</p>
+          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">300+</p>
+        </a>
       </div>
+      <br>
+
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="{{ route('contact') }}"
+               class="inline-flex items-center gap-2 rounded-full bg-white text-emerald-950 px-5 py-2.5 text-sm font-semibold shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
+              Konsultasi Sekarang
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0-5.25-5.25M19.5 12l-5.25 5.25" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section: Stats Cards -->
 
     </div>
   </div>
 </section>
+
 
 {{-- =========================
    SECTION 1: MITRA (Logo Slider) - from DB/Filament

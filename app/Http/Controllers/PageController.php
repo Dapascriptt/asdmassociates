@@ -20,9 +20,11 @@ class PageController extends Controller
         $partners = \App\Models\Partner::where('is_active', true)->where('is_client', false)->orderBy('order')->get();
         $clients = \App\Models\Partner::where('is_active', true)->where('is_client', true)->orderBy('order')->get();
         $galleries = \App\Models\Gallery::latest()->take(6)->get();
+        $memberCount = Member::count();
+        $caseCount = PortfolioItem::count();
 
         // gunakan view utama (resources/views/home.blade.php)
-        return view('home', compact('news', 'partners', 'clients', 'galleries'));
+        return view('home', compact('news', 'partners', 'clients', 'galleries', 'memberCount', 'caseCount'));
     }
 
     public function about()
