@@ -222,10 +222,6 @@
            class="inline-flex items-center justify-center rounded-full bg-emerald-800 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-900 transition">
           Hubungi Kami
         </a>
-        <a href="#layanan"
-           class="inline-flex items-center justify-center rounded-full border border-emerald-900/20 px-6 py-3 text-sm font-semibold text-emerald-900 hover:bg-emerald-50 transition">
-          Lihat Layanan
-        </a>
       </div>
     </div>
   </div>
