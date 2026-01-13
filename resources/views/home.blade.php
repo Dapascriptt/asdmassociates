@@ -12,49 +12,68 @@
 
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-24 sm:pt-36 sm:pb-32 lg:pt-44 lg:pb-40">
     <!-- Main Content Wrapper -->
-    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
+    <div class="flex flex-col items-start gap-8">
 
-      <!-- Left Section: Logo and Text -->
-      <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 w-full lg:w-auto">
-        <div class="text-white animate-[fadeInUp_0.8s_ease]">
-          <p class="text-base sm:text-lg lg:text-xl font-semibold tracking-wide">ASDM Associates</p>
-          <h1 class="mt-1 sm:mt-2 text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
-            Firma Hukum Profesional<br class="hidden sm:block"> Balikpapan
-          </h1>
-          <p class="mt-2 sm:mt-3 lg:mt-4 max-w-2xl text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed">
-            Pendampingan hukum yang tegas, terukur, dan berorientasi solusi bagi individu maupun korporasi.
-          </p>
-          <br>
-           <div class="flex flex-row sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto animate-[fadeInUp_1s_ease]">
-        <a href="{{ route('member') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 sm:flex-none sm:min-w-[160px] lg:min-w-[170px] text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
+      <!-- Top Section: Text Content -->
+      <div class="text-white animate-[fadeInUp_0.8s_ease] max-w-3xl">
+        <p class="text-base sm:text-lg lg:text-xl font-semibold tracking-wide">ASDM Associates</p>
+        <h1 class="mt-1 sm:mt-2 text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
+          Firma Hukum Profesional Balikpapan
+        </h1>
+        <p class="mt-2 sm:mt-3 lg:mt-4 text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed">
+          Pendampingan hukum yang tegas, terukur, dan berorientasi solusi bagi individu maupun korporasi.
+        </p>
+      </div>
+
+      <!-- Stats Cards Section -->
+      <div class="flex flex-row gap-3 sm:gap-4 w-full max-w-2xl animate-[fadeInUp_1s_ease]">
+        <a href="{{ route('member') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
           <p class="text-xs sm:text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">Anggota & Partner Aktif</p>
-          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">5</p>
+          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">{{ $memberCount ?? '5' }}</p>
         </a>
 
-        <a href="{{ route('portfolio') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 sm:flex-none sm:min-w-[160px] lg:min-w-[170px] text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
+        <a href="{{ route('portfolio') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
           <p class="text-xs sm:text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">Jumlah Kasus</p>
-          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">300+</p>
+          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">{{ $caseCount ?? '300+' }}</p>
         </a>
       </div>
-      <br>
 
-          <div class="mt-4 flex flex-wrap gap-3">
-            <a href="{{ route('contact') }}"
-               class="inline-flex items-center gap-2 rounded-full bg-white text-emerald-950 px-5 py-2.5 text-sm font-semibold shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
-              Konsultasi Sekarang
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0-5.25-5.25M19.5 12l-5.25 5.25" />
-              </svg>
-            </a>
-          </div>
-        </div>
+      <!-- CTA Button -->
+      <div class="flex flex-wrap gap-3 animate-[fadeInUp_1.2s_ease]">
+        <a href="{{ route('contact') }}"
+           class="inline-flex items-center gap-2 rounded-full bg-white text-emerald-950 px-6 py-3 text-sm font-semibold shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          Konsultasi Sekarang
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
       </div>
-
-      <!-- Right Section: Stats Cards -->
 
     </div>
   </div>
 </section>
+
+<style>
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 
 
 {{-- =========================
