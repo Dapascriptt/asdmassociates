@@ -88,25 +88,16 @@
     </svg>
   </a>
 
-  {{-- Instagram (di bawah WA) - Background dengan gradien Instagram yang proper --}}
+  {{-- Instagram dengan SVG gradient yang built-in --}}
   <a href="https://instagram.com/saridamayanti_associates" target="_blank" rel="noopener"
-     class="group relative inline-flex h-12 w-12 items-center justify-center rounded-full shadow-lg hover:scale-105 transition overflow-hidden"
+     style="background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCAF45 100%);"
+     class="inline-flex h-12 w-12 items-center justify-center rounded-full text-white shadow-lg hover:scale-105 transition"
      aria-label="Instagram">
-    {{-- Background gradient Instagram --}}
-    <div class="absolute inset-0 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCAF45]"></div>
-    {{-- Icon --}}
-    <svg xmlns="http://www.w3.org/2000/svg" class="relative h-6 w-6 text-white z-10" fill="currentColor" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
       <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm11 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
     </svg>
   </a>
 </div>
-
-<style>
-/* Pastikan gradient Instagram terlihat dengan baik */
-.group:hover .absolute {
-  background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCAF45 100%);
-}
-</style>
 
     @stack('scripts')
 </body>
