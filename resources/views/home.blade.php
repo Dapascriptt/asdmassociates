@@ -29,12 +29,12 @@
       <div class="flex flex-row gap-3 sm:gap-4 w-full max-w-2xl animate-[fadeInUp_1s_ease]">
         <a href="{{ route('member') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
           <p class="text-xs sm:text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">Anggota & Partner Aktif</p>
-          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">{{ $memberCount ?? '5' }}</p>
+          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">5</p>
         </a>
 
         <a href="{{ route('portfolio') }}" class="group rounded-xl lg:rounded-2xl bg-black/80 backdrop-blur-sm px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 flex-1 text-white shadow-xl hover:bg-black/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl border border-white/10 hover:border-white/20">
           <p class="text-xs sm:text-sm font-semibold text-white/70 group-hover:text-white/90 transition-colors">Jumlah Kasus</p>
-          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">{{ $caseCount ?? '300+' }}</p>
+          <p class="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold leading-none group-hover:scale-110 transition-transform duration-300">300+</p>
         </a>
       </div>
 
