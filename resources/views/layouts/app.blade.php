@@ -71,7 +71,7 @@
     @include('layouts.partials.footer')
 
     @php
-      $waRaw = env('APP_WA_NUMBER', '6281283800498');
+      $waRaw = env('APP_WA_NUMBER', '6281254899699');
       $waNumber = preg_replace('/\D+/', '', $waRaw) ?: '6281283800498';
       $waLink = 'https://wa.me/' . $waNumber;
     @endphp

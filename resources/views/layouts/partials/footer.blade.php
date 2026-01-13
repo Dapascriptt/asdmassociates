@@ -40,7 +40,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                     d="M20.25 12a8.25 8.25 0 1 1-15.81-3.61L3 21l4.05-1.41A8.25 8.25 0 0 1 20.25 12Z" />
             </svg>
-            +62 812-3456-7890
+            +62 812-5489-9699
           </a>
 
           <a href="https://instagram.com/saridamayanti_associates"
