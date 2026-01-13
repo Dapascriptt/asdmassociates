@@ -5,7 +5,7 @@
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
     <div class="text-center">
       <p class="text-sm font-semibold uppercase tracking-wide text-emerald-800">Member</p>
-      <h1 class="mt-2 text-3xl sm:text-4xl font-bold text-emerald-950">Tim Advokat & Konsultan</h1>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-bold text-emerald-950">ADVOKAT</h1>
     </div>
 
     <div class="mt-10">
