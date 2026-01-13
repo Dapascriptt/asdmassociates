@@ -256,7 +256,7 @@
     </p>
 
     <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-emerald-950">
-      Dokumentasi kegiatan & momen
+      Dokumentasi Kegiatan
     </h2>
   </div>
 

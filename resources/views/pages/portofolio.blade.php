@@ -14,7 +14,7 @@
   <div class="text-center">
     <p class="text-sm font-semibold uppercase tracking-widest text-emerald-800">Portofolio</p>
     <h1 class="mt-2 text-3xl sm:text-4xl font-bold text-emerald-950">
-      Beberapa mandat & kasus terpilih
+      Kasus yang telah ditangani
     </h1>
   </div>
 

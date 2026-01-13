@@ -34,7 +34,7 @@
   <div class="text-center max-w-3xl mx-auto">
     <p class="text-sm font-semibold uppercase tracking-wide text-emerald-800">Galeri</p>
     <h1 class="mt-2 text-3xl font-bold text-emerald-950">
-      Dokumentasi kegiatan & momen
+      Dokumentasi Kegiatan
     </h1>
   </div>
 
