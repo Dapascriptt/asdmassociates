@@ -21,12 +21,12 @@
 >
   <div
     :class="scrolled
-      ? 'mx-auto mt-3 max-w-6xl rounded-3xl bg-white/90 ring-1 ring-emerald-900/10 shadow-2xl shadow-black/15'
-      : 'mx-auto max-w-7xl rounded-none bg-emerald-950/95 ring-0 shadow-none'"
+      ? 'mx-auto mt-3 w-full rounded-3xl bg-white/90 ring-1 ring-emerald-900/10 shadow-2xl shadow-black/15'
+      : 'mx-auto w-full rounded-none bg-emerald-950/95 ring-0 shadow-none'"
     :style="`transform: translateY(${Math.min(y, 10)}px)`"
     class="border-b border-emerald-900/10 backdrop-blur transition-all duration-300"
   >
-    <div class="mx-auto grid h-16 max-w-7xl grid-cols-[auto,1fr,auto] items-center px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto grid h-16 w-full grid-cols-[auto,1fr,auto] items-center px-4 sm:px-6 lg:px-10 gap-4">
 
 
       {{-- LEFT --}}
