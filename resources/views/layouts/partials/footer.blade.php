@@ -61,25 +61,53 @@
       </div>
 
       {{-- ADDRESS --}}
-      <div class="md:col-span-4">
-        <p class="text-sm font-semibold text-emerald-950">Alamat</p>
+      {{-- KOLOM ALAMAT --}}
+<div class="md:col-span-4">
+  <p class="text-sm font-semibold text-emerald-950">Alamat</p>
 
-        <div class="mt-3 flex items-start gap-2 text-sm text-slate-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
-               fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M19.5 10.5c0 7.5-7.5 10.5-7.5 10.5S4.5 18 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-          </svg>
+  {{-- HEAD OFFICE --}}
+  <p class="mt-3 text-xs font-semibold text-emerald-900 tracking-wide">
+    Head Office
+  </p>
 
-          <p class="leading-relaxed">
-            Jalan MT Haryono No 43. Kelurahan Damai, Bahagia, Kec. Balikpapan Kota,<br>
-            Kota Balikpapan, Kalimantan Timur 76114
+  <div class="mt-1 flex items-start gap-2 text-sm text-slate-600">
+    <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
+         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M19.5 10.5c0 7.5-7.5 10.5-7.5 10.5S4.5 18 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+    </svg>
 
-          </p>
-        </div>
-      </div>
+    <p class="leading-relaxed">
+      Jalan MT Haryono No 43, Kelurahan Damai, Bahagia,<br>
+      Kec. Balikpapan Kota, Kota Balikpapan,<br>
+      Kalimantan Timur 76114
+    </p>
+  </div>
+
+  {{-- OUR PARTNER --}}
+  <p class="mt-4 text-xs font-semibold text-emerald-900 tracking-wide">
+    Our Partner
+  </p>
+
+  <div class="mt-1 flex items-start gap-2 text-sm text-slate-600">
+    <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
+         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M19.5 10.5c0 7.5-7.5 10.5-7.5 10.5S4.5 18 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+    </svg>
+
+    <p class="leading-relaxed">
+      Office Jakarta: Belleza BSA, 1st Floor Unit 106,<br>
+      Jl. Letjen Soepeno, Kebayoran Lama,<br>
+      Jakarta Selatan
+    </p>
+  </div>
+</div>
+
 
     </div>
 
