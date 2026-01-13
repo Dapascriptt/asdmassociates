@@ -65,9 +65,7 @@
       </h1>
 
       <p class="mt-4 text-slate-600 leading-relaxed text-justify">
-        ASDM Associates menyediakan pendampingan hukum untuk individu maupun badan usaha.
-        Kami membantu Anda memahami posisi hukum, memetakan risiko, dan memilih langkah terbaik
-        melalui proses yang transparan serta terdokumentasi.
+        ASDM Associates menyediakan pendampingan hukum bagi individu maupun badan usaha dengan pendekatan yang profesional dan terukur. Kami membantu klien memahami posisi hukumnya secara jelas, memetakan potensi risiko yang dihadapi, serta merumuskan langkah hukum terbaik melalui proses yang transparan, terdokumentasi, dan sesuai dengan ketentuan hukum yang berlaku, guna melindungi kepentingan klien secara optimal.
       </p>
 
       {{-- CTA --}}
