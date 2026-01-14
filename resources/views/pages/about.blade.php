@@ -126,10 +126,7 @@
   <section class="bg-slate-50 border-y border-slate-100 -mt-10 pt-10 pb-14">
     <div class="mx-auto max-w-7xl px-4">
       <div class="text-center max-w-3xl mx-auto">
-        <p class="text-sm font-semibold uppercase tracking-wide text-emerald-800">Galeri</p>
-        <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-emerald-950">
-          Sekilas aktivitas & momen
-        </h2>
+        <p class="text-sm font-semibold uppercase tracking-wide text-emerald-800">Galeri Lokasi</p>
       </div>
 
       <div
