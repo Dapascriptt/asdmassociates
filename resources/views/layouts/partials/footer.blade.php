@@ -12,7 +12,7 @@
         </p>
 
         {{-- mini note / optional --}}
-        <p class="mt-4 text-xs text-white/60">
+        <p class="mt-4 text-sm leading-relaxed text-white/70">
           Konsultasi awal untuk memetakan posisi hukum & langkah terbaik.
         </p>
       </div>
