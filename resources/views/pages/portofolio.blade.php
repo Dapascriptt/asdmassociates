@@ -19,18 +19,18 @@
   </div>
 
   @if($items->isNotEmpty())
-    <div class="mt-6 mx-auto max-w-7xl px-4">
+   <div class="mt-6 mx-auto max-w-7xl px-4">
   {{-- HORIZONTAL SCROLL CONTAINER --}}
   <div class="overflow-x-auto pb-4 scrollbar-hide">
     <div class="flex gap-6 min-w-max">
       @foreach($items as $item)
-      <div class="relative group w-80">
+      <div class="relative group w-80 flex-shrink-0">
         {{-- EMERALD GLOW --}}
         <div class="pointer-events-none absolute -inset-2 rounded-2xl bg-emerald-400/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
         {{-- CARD --}}
-        <div class="relative rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-          <div class="p-6 flex flex-col items-center text-center">
+        <div class="relative rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden h-full">
+          <div class="p-6 flex flex-col items-center text-center h-72">
             {{-- LOGO --}}
             <div class="h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-200 flex items-center justify-center mb-4">
               @if($item->logo)
@@ -46,12 +46,12 @@
             </div>
 
             {{-- TEXT --}}
-            <div>
-              <p class="text-base font-semibold text-emerald-700">{{ $item->role ?? 'Mandat' }}</p>
+            <div class="flex-1 flex flex-col justify-start">
+              <p class="text-base font-semibold text-emerald-700">{{ $item->role ?? 'Kuasa Hukum' }}</p>
               @if($item->period)
                 <p class="mt-1 text-slate-500 text-sm">{{ $item->period }}</p>
               @endif
-              <h3 class="mt-3 text-2xl font-bold text-emerald-950 leading-tight break-words">{{ $item->company }}</h3>
+              <h3 class="mt-3 text-xl font-bold text-emerald-950 leading-tight break-words line-clamp-3">{{ $item->company }}</h3>
             </div>
           </div>
         </div>
@@ -60,6 +60,27 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Line clamp utility */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
 
 <style>
   /* Hide scrollbar for Chrome, Safari and Opera */
