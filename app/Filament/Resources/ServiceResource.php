@@ -38,10 +38,23 @@ class ServiceResource extends Resource
                             ->placeholder('utama atau pendukung')
                             ->maxLength(50),
 
-                Forms\Components\TextInput::make('icon')
-                    ->label('Ikon (scale, users, gavel, building, doc, hand, chat)')
-                    ->helperText('Pilih salah satu nama ikon yang sudah disiapkan.')
-                    ->maxLength(50),
+                Forms\Components\Select::make('icon')
+                    ->label('Ikon')
+                    ->options([
+                        'building' => 'Gedung / Perusahaan',
+                        'doc' => 'Dokumen',
+                        'ring' => 'Cincin / Perkawinan',
+                        'women-child' => 'Perempuan & Anak',
+                        'gavel' => 'Litigasi / Pidana',
+                        'scale' => 'Timbangan / Perdata',
+                        'users' => 'Konsultasi',
+                        'hand' => 'Perlindungan',
+                        'chat' => 'Konsultasi Cepat',
+                    ])
+                    ->searchable()
+                    ->placeholder('Pilih ikon sesuai kasus')
+                    ->helperText('Gunakan ikon yang sesuai dengan jenis kasus agar tampil konsisten.')
+                    ->columnSpan(2),
 
                 Forms\Components\FileUpload::make('image')
                     ->label('Gambar (opsional)')

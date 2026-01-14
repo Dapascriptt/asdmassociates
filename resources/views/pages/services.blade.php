@@ -19,6 +19,8 @@
     'doc' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 3h7l3 3v15a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />',
     'hand' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 13V7a1 1 0 0 1 2 0v6m0 0V6a1 1 0 0 1 2 0v7m0 0V7a1 1 0 0 1 2 0v6m0 0V9a1 1 0 0 1 2 0v5a6 6 0 0 1-6 6H9a4 4 0 0 1-4-4v-2a1 1 0 0 1 2 0v1" />',
     'chat' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h8M8 14h5M21 12a8 8 0 1 1-4-7l4-1-1 4a7.98 7.98 0 0 1 1 4Z" />',
+    'ring' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm0-3.5a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />',
+    'women-child' => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.5 8.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Zm6.25 2.25a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm-9.5 9.5v-4.25a3.5 3.5 0 0 1 3.5-3.5h1a3.5 3.5 0 0 1 3.5 3.5V20m2.5 0v-3a2.75 2.75 0 0 0-2.75-2.75h-1.25" />',
   ];
 
   // Data dari Filament (jika ada)
