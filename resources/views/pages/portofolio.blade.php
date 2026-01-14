@@ -19,96 +19,60 @@
   </div>
 
   @if($items->isNotEmpty())
-    <div
-      x-data="{
-        idx: 0,
-        slides: {{ $items->values()->toJson() }},
-        next(){ this.idx = (this.idx + 1) % this.slides.length },
-        prev(){ this.idx = (this.idx - 1 + this.slides.length) % this.slides.length },
-        go(i){ this.idx = i },
-      }"
-      class="relative mt-10 mx-auto max-w-4xl"
-    >
-      {{-- EMERALD GLOW --}}
-      <div class="pointer-events-none absolute -inset-4 rounded-3xl bg-emerald-400/20 blur-3xl"></div>
+    <div class="mt-6 mx-auto max-w-7xl px-4">
+  {{-- HORIZONTAL SCROLL CONTAINER --}}
+  <div class="overflow-x-auto pb-4 scrollbar-hide">
+    <div class="flex gap-6 min-w-max">
+      @foreach($items as $item)
+      <div class="relative group w-80">
+        {{-- EMERALD GLOW --}}
+        <div class="pointer-events-none absolute -inset-2 rounded-2xl bg-emerald-400/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-      {{-- CARD --}}
-      <div class="relative rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-        {{-- SLIDE AREA --}}
-        <div class="relative px-16 sm:px-20 py-10 sm:py-12 min-h-[220px] sm:min-h-[240px] flex items-center">
-          <template x-for="(slide, i) in slides" :key="i">
-            <div
-              x-show="idx === i"
-              x-transition:enter="transition ease-out duration-500"
-              x-transition:enter-start="opacity-0 transform translate-x-8"
-              x-transition:enter-end="opacity-100 transform translate-x-0"
-              x-transition:leave="transition ease-in duration-300"
-              x-transition:leave-start="opacity-100 transform translate-x-0"
-              x-transition:leave-end="opacity-0 transform -translate-x-8"
-              class="w-full flex items-center justify-center gap-4 sm:gap-6 absolute inset-0 px-16 sm:px-20"
-            >
-              {{-- LOGO --}}
-              <div class="h-16 w-16 sm:h-20 sm:w-20 shrink-0 overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200 flex items-center justify-center">
-                <template x-if="slide.logo">
-                  <img
-                    :src="'{{ asset('storage') }}/' + slide.logo"
-                    alt="Logo"
-                    class="h-full w-full object-contain p-2"
-                    loading="lazy"
-                  >
-                </template>
-                <template x-if="!slide.logo">
-                  <span class="text-slate-400 text-xs font-semibold">Logo</span>
-                </template>
-              </div>
-
-              {{-- TEXT --}}
-              <div class="min-w-0">
-                <p class="text-xs sm:text-sm font-semibold text-emerald-700" x-text="slide.role || 'Mandat'"></p>
-                <p class="mt-0.5 text-slate-500 text-xs sm:text-sm" x-text="slide.period || ''"></p>
-                <h3 class="mt-3 text-xl sm:text-2xl font-bold text-emerald-950 leading-tight break-words" x-text="slide.company"></h3>
-              </div>
+        {{-- CARD --}}
+        <div class="relative rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+          <div class="p-6 flex flex-col items-center text-center">
+            {{-- LOGO --}}
+            <div class="h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-200 flex items-center justify-center mb-4">
+              @if($item->logo)
+                <img
+                  src="{{ asset('storage/' . $item->logo) }}"
+                  alt="Logo"
+                  class="h-full w-full object-contain p-3"
+                  loading="lazy"
+                >
+              @else
+                <span class="text-slate-400 text-sm font-semibold">Logo</span>
+              @endif
             </div>
-          </template>
 
-          {{-- NAV --}}
-          <div class="absolute inset-y-0 left-4 right-4 flex items-center justify-between pointer-events-none z-10">
-            <button
-              type="button"
-              @click="prev()"
-              class="pointer-events-auto h-11 w-11 rounded-full bg-white border border-slate-200
-                     text-slate-700 text-xl font-semibold shadow-md hover:bg-slate-50 hover:shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center"
-              aria-label="Sebelumnya"
-            >
-              ‹
-            </button>
-
-            <button
-              type="button"
-              @click="next()"
-              class="pointer-events-auto h-11 w-11 rounded-full bg-white border border-slate-200
-                     text-slate-700 text-xl font-semibold shadow-md hover:bg-slate-50 hover:shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center"
-              aria-label="Selanjutnya"
-            >
-              ›
-            </button>
+            {{-- TEXT --}}
+            <div>
+              <p class="text-base font-semibold text-emerald-700">{{ $item->role ?? 'Mandat' }}</p>
+              @if($item->period)
+                <p class="mt-1 text-slate-500 text-sm">{{ $item->period }}</p>
+              @endif
+              <h3 class="mt-3 text-2xl font-bold text-emerald-950 leading-tight break-words">{{ $item->company }}</h3>
+            </div>
           </div>
         </div>
-
-        {{-- DOTS --}}
-        <div class="flex items-center justify-center gap-2 py-4 border-t border-slate-100">
-          <template x-for="(slide, i) in slides" :key="'dot'+i">
-            <button
-              type="button"
-              @click="go(i)"
-              class="h-2.5 w-2.5 rounded-full transition-all duration-300"
-              :class="idx===i ? 'bg-emerald-700 scale-125 w-6' : 'bg-slate-300 hover:bg-slate-400'"
-              aria-label="Pindah slide"
-            ></button>
-          </template>
-        </div>
       </div>
+      @endforeach
     </div>
+  </div>
+</div>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+</style>
   @else
     <p class="mt-8 text-center text-slate-500">Belum ada portofolio yang ditambahkan.</p>
   @endif
