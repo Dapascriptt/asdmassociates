@@ -178,7 +178,7 @@
 @endif
 
 {{-- Sertifikasi --}}
-<section class="mx-auto max-w-7xl px-4 py-14" x-data="{open:false, img:'', title:''}">
+<section class="mx-auto max-w-7xl px-4 py-14">
   <div class="flex justify-center">
     <div class="text-center max-w-3xl">
       <h2 class="text-2xl font-bold text-emerald-950">
@@ -189,30 +189,29 @@
 
   <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
     @forelse($certs as $c)
-      <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-md transition">
-        <div class="flex items-start gap-4">
-          <div class="mt-1 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-800 border border-emerald-100">
-            ✔
+      <div class="rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition">
+        @if($c->image)
+          <div class="w-full">
+            <img
+              src="{{ asset('storage/' . $c->image) }}"
+              alt="{{ $c->title }}"
+              class="w-full h-64 object-cover"
+            >
           </div>
-          <div class="flex-1">
-            <h3 class="text-lg font-semibold text-emerald-950">
-              {{ $c->title }}
-            </h3>
-            <p class="mt-2 text-slate-600">
-              {{ $c->issuer }}{{ $c->year ? ', ' . $c->year : '' }}
-            </p>
-            @if($c->image)
-              <button
-                type="button"
-                class="mt-3 inline-flex items-center gap-2 rounded-full border border-emerald-900/15 px-3 py-2 text-sm font-semibold text-emerald-900 hover:bg-emerald-50 transition"
-                @click="open=true; img='{{ asset('storage/' . $c->image) }}'; title='{{ addslashes($c->title) }}';"
-              >
-                Lihat sertifikat
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0-5.25-5.25M19.5 12l-5.25 5.25" />
-                </svg>
-              </button>
-            @endif
+        @endif
+        <div class="p-7">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-800 border border-emerald-100">
+              ✔
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold text-emerald-950">
+                {{ $c->title }}
+              </h3>
+              <p class="mt-2 text-slate-600">
+                {{ $c->issuer }}{{ $c->year ? ', ' . $c->year : '' }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -221,26 +220,6 @@
         Belum ada data sertifikasi.
       </p>
     @endforelse
-  </div>
-
-  {{-- Modal sertifikat --}}
-  <div
-    x-show="open"
-    x-cloak
-    class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur"
-    x-transition
-    @keydown.escape.window="open=false"
-    @click.self="open=false"
-  >
-    <div class="relative w-full max-w-3xl mx-4 rounded-3xl bg-white shadow-2xl overflow-hidden">
-      <div class="flex items-center justify-between px-6 py-4 border-b">
-        <p class="text-lg font-semibold text-emerald-950" x-text="title"></p>
-        <button type="button" class="text-slate-500 hover:text-emerald-900" @click="open=false">✕</button>
-      </div>
-      <div class="bg-slate-100 flex items-center justify-center">
-        <img :src="img" alt="" class="w-full object-contain max-h-[80vh] mx-auto">
-      </div>
-    </div>
   </div>
 </section>
 
