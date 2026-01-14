@@ -32,8 +32,8 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div class="rounded-3xl border border-emerald-900/10 bg-white shadow-sm p-6 flex flex-col items-center text-center">
         @if($member->photo)
-          <div class="w-40 h-40 rounded-2xl overflow-hidden bg-slate-100">
-            <img src="{{ asset('storage/' . $member->photo) }}" alt="{{ $member->name }}" class="h-full w-full object-cover" loading="lazy">
+          <div class="w-44 aspect-[3/4] rounded-2xl overflow-hidden bg-slate-100">
+            <img src="{{ asset('storage/' . $member->photo) }}" alt="{{ $member->name }}" class="h-full w-full object-cover object-top" loading="lazy">
           </div>
         @endif
         <h1 class="mt-4 text-2xl font-bold text-emerald-950">{{ $member->name }}</h1>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Firma Hukum Terpercaya di Balikpapan | ASDM Associates')
+@section('title', 'Firma Hukum Profesional di Balikpapan | ASDM Associates')
 @section('meta_description', 'ASDM Associates adalah firma hukum profesional di Balikpapan yang menangani perkara perdata, pidana, dan hukum korporasi dengan pengalaman lebih dari 10 tahun. Konsultasi gratis!')
 @section('canonical', route('home'))
 @section('meta_image', asset('images/home-og-image.jpg'))
