@@ -17,18 +17,3 @@ Route::get('/hubungi-kami', [PageController::class, 'contact'])->name('contact')
 Route::post('/contactsend', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
-Route::get('/robots.txt', function () {
-    $sitemap = route('sitemap');
-    $robots = <<<TXT
-User-agent: *
-Disallow: /admin
-Disallow: /filament
-Disallow: /dashboard
-Disallow: /login
-Disallow: /register
-Allow: /
-
-Sitemap: {$sitemap}
-TXT;
-    return response($robots, 200, ['Content-Type' => 'text/plain']);
-});
