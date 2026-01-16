@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /filament
+Disallow: /dashboard
+Disallow: /login
+Disallow: /register
+Allow: /
+
+Sitemap: https://saridamayantiassociates.com/sitemap.xml
