@@ -15,7 +15,8 @@
 @endphp
 
 @section('content')
-<section class="mx-auto max-w-7xl px-4 pt-14 pb-10">
+<section class="bg-gradient-to-br from-emerald-50 via-emerald-100/70 to-emerald-50">
+  <div class="mx-auto max-w-7xl px-4 pt-14 pb-10">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
     <div>
       <p class="text-sm font-semibold uppercase tracking-widest text-emerald-800">Kontak</p>
@@ -32,7 +33,7 @@
       </div>
     </div>
 
-    <div class="rounded-3xl border border-emerald-900/10 bg-white shadow-sm p-6">
+    <div class="rounded-3xl border border-emerald-900/15 bg-white/80 backdrop-blur shadow-sm p-6">
       <h2 class="text-xl font-semibold text-emerald-950">Kirim Pesan</h2>
       <p class="text-sm text-slate-600 mt-1">Formulir ini akan diteruskan ke email tim ASDM Associates.</p>
       @if (session('status'))
@@ -58,43 +59,48 @@
       </form>
     </div>
   </div>
+  </div>
 </section>
 
-<section class="bg-slate-900 text-white py-10">
-  <div class="mx-auto max-w-5xl px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-    <div class="flex flex-col items-center gap-2 py-6">
-      <div class="h-14 w-14 rounded-full bg-white/10 flex items-center justify-center text-emerald-200">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a1.5 1.5 0 0 0 1.5-1.5v-2.1a1.5 1.5 0 0 0-1.232-1.476l-3.117-.52a1.5 1.5 0 0 0-1.518.74l-.772 1.285a12.035 12.035 0 0 1-5.393-5.393l1.285-.772a1.5 1.5 0 0 0 .74-1.518l-.52-3.117A1.5 1.5 0 0 0 8.85 3.75H6.75A1.5 1.5 0 0 0 5.25 5.25v1.5Z" /></svg>
+<section class="bg-gradient-to-br from-emerald-50 via-emerald-100/70 to-emerald-50 pb-10">
+  <div class="mx-auto max-w-6xl px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="rounded-2xl border border-emerald-900/20 bg-white/40 text-emerald-950 backdrop-blur shadow-sm flex flex-col items-center gap-2 py-6 px-4">
+      <div class="h-14 w-14 rounded-full bg-emerald-900/10 flex items-center justify-center text-emerald-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M1.5 4.5A3 3 0 0 1 4.5 1.5h1.372c1.299 0 2.42.932 2.658 2.21l.529 2.85a2.999 2.999 0 0 1-1.383 3.144l-1.086.651a12.024 12.024 0 0 0 5.055 5.055l.651-1.086a2.999 2.999 0 0 1 3.144-1.383l2.85.529A2.7 2.7 0 0 1 21.5 15.486V17.5a3 3 0 0 1-3 3h-.75C9.082 20.5 1.5 12.918 1.5 3.25V4.5Z"/>
+        </svg>
       </div>
       <p class="text-sm font-semibold tracking-wide uppercase">Phone</p>
-      <a href="tel:{{ preg_replace('/\\s+/', '', $phone) }}" class="text-emerald-100 hover:text-emerald-200 text-sm">{{ $phone }}</a>
+      <a href="tel:{{ preg_replace('/\\s+/', '', $phone) }}" class="text-emerald-900 hover:text-emerald-950 text-sm">{{ $phone }}</a>
     </div>
 
-    <div class="flex flex-col items-center gap-2 py-6">
-      <div class="h-14 w-14 rounded-full bg-white/10 flex items-center justify-center text-emerald-200">
+      <div class="rounded-2xl border border-emerald-900/20 bg-white/40 text-emerald-950 backdrop-blur shadow-sm flex flex-col items-center gap-2 py-6 px-4">
+      <div class="h-14 w-14 rounded-full bg-emerald-900/10 flex items-center justify-center text-emerald-800">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a1.5 1.5 0 0 1-1.5 1.5h-16.5a1.5 1.5 0 0 1-1.5-1.5v-10.5a1.5 1.5 0 0 1 1.5-1.5h16.5a1.5 1.5 0 0 1 1.5 1.5Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3 7.5 8.25 6 8.25-6" /></svg>
       </div>
       <p class="text-sm font-semibold tracking-wide uppercase">Emails</p>
-      <a href="mailto:{{ $email }}" class="text-emerald-100 hover:text-emerald-200 text-sm">{{ $email }}</a>
+      <a href="mailto:{{ $email }}" class="text-emerald-900 hover:text-emerald-950 text-sm">{{ $email }}</a>
       @if($emailAlt)
-        <a href="mailto:{{ $emailAlt }}" class="text-emerald-100 hover:text-emerald-200 text-sm">{{ $emailAlt }}</a>
+        <a href="mailto:{{ $emailAlt }}" class="text-emerald-900 hover:text-emerald-950 text-sm">{{ $emailAlt }}</a>
       @endif
     </div>
 
-    <div class="flex flex-col items-center gap-2 py-6 px-4 text-center">
-      <div class="h-14 w-14 rounded-full bg-white/10 flex items-center justify-center text-emerald-200">
+      <div class="rounded-2xl border border-emerald-900/20 bg-white/40 text-emerald-950 backdrop-blur shadow-sm flex flex-col items-center gap-2 py-6 px-4 text-center">
+      <div class="h-14 w-14 rounded-full bg-emerald-900/10 flex items-center justify-center text-emerald-800">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9 9 0 1 0-9-9c0 5 4 9 9 9Z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 12v-4m0 8h.01" /></svg>
       </div>
       <p class="text-sm font-semibold tracking-wide uppercase">Address</p>
-      <p class="text-emerald-100 text-sm leading-relaxed">{{ $address }}</p>
+      <p class="text-emerald-900 text-sm leading-relaxed">{{ $address }}</p>
     </div>
 
-    <div class="flex flex-col items-center gap-2 py-6">
-      <div class="h-14 w-14 rounded-full bg-white/10 flex items-center justify-center text-emerald-200">
+      <div class="rounded-2xl border border-emerald-900/20 bg-white/40 text-emerald-950 backdrop-blur shadow-sm flex flex-col items-center gap-2 py-6 px-4">
+      <div class="h-14 w-14 rounded-full bg-emerald-900/10 flex items-center justify-center text-emerald-800">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l3 3" /></svg>
       </div>
       <p class="text-sm font-semibold tracking-wide uppercase">Working Hours</p>
-      <p class="text-emerald-100 text-sm">{{ $hours }}</p>
+      <p class="text-emerald-900 text-sm">{{ $hours }}</p>
+    </div>
     </div>
   </div>
 </section>

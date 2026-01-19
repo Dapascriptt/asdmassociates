@@ -77,6 +77,68 @@
 
 
 {{-- =========================
+   SECTION: LAYANAN (Ringkas)
+========================= --}}
+@php
+  $homeServices = $servicesMain ?? collect();
+  if ($homeServices->isEmpty()) {
+    $homeServices = \App\Models\Service::orderBy('sort_order')->orderByDesc('updated_at')->take(4)->get();
+  }
+  $serviceCardImage = $homeServices->first()?->image ? asset('storage/' . $homeServices->first()->image) : asset('images/section1.jpeg');
+@endphp
+
+<section class="relative bg-white py-14 sm:py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <div class="lg:col-span-5">
+        <div class="rounded-3xl border border-emerald-900/10 bg-emerald-950/5 p-4 shadow-sm">
+          <div class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-slate-100">
+            <img src="{{ asset('images/andisari.jpeg') }}" alt="Andi Sari" class="h-full w-full object-cover object-center" loading="lazy">
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-950/50 via-transparent to-transparent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <p class="text-sm font-semibold uppercase tracking-widest text-emerald-800">Layanan</p>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-emerald-950">
+          Pendampingan hukum yang terukur
+        </h2>
+        <p class="mt-3 text-slate-600 leading-relaxed">
+          ASDM Associates menyediakan layanan hukum untuk individu maupun badan usaha dengan pendekatan yang jelas, rapi, dan solutif.
+        </p>
+
+        <div class="mt-6 space-y-3">
+          @foreach($homeServices as $service)
+            <details class="group rounded-2xl border border-emerald-900/10 bg-white shadow-sm">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left">
+                <div>
+                  <p class="text-sm font-semibold text-emerald-950">{{ $service->title }}</p>
+                  <p class="text-xs text-slate-500">Klik untuk lihat ringkasannya</p>
+                </div>
+                <span class="text-emerald-800 text-lg group-open:rotate-45 transition">+</span>
+              </summary>
+              <div class="px-5 pb-4 text-sm text-slate-600">
+                {{ \Illuminate\Support\Str::limit(strip_tags($service->description ?? ''), 180, '...') }}
+                <div class="mt-3">
+                  <a href="{{ route('services') }}" class="inline-flex items-center gap-2 text-emerald-800 font-semibold hover:text-emerald-900">
+                    Lihat layanan
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0-5.25-5.25M19.5 12l-5.25 5.25" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </details>
+          @endforeach
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{-- =========================
    SECTION 1: MITRA (Logo Slider) - from DB/Filament
 ========================= --}}
 <section class="relative py-14 sm:py-16 bg-white">
