@@ -1,8 +1,19 @@
 @extends('layouts.app')
-@section('title', 'Firma Hukum Profesional di Balikpapan | ASDM Associates')
-@section('meta_description', 'ASDM Associates adalah firma hukum profesional di Balikpapan yang menangani perkara perdata, pidana, dan hukum korporasi dengan pengalaman lebih dari 10 tahun. Konsultasi gratis!')
+
+@section(
+  'title',
+  'Firma Hukum & Pengacara Balikpapan | ASDM Associates'
+)
+
+@section(
+  'meta_description',
+  'ASDM Associates adalah firma hukum dan pengacara Balikpapan profesional yang menangani perkara perdata, pidana, dan hukum korporasi. Konsultasi gratis!'
+)
+
 @section('canonical', route('home'))
 @section('meta_image', asset('images/home-og-image.jpg'))
+
+
 
 @section('content')
 <section class="relative isolate min-h-[640px] overflow-hidden">
