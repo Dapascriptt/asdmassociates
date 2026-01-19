@@ -10,11 +10,13 @@
 
     $seoTitle = trim(View::yieldContent('title', 'ASDM Associates')) ?: 'ASDM Associates';
 
-    $defaultDescription = 'ASDM Associates - Firma hukum profesional, tegas, dan terpercaya.';
+    $defaultDescription = 'ASDM Associates adalah firma hukum dan pengacara profesional di Balikpapan yang menangani perkara perdata, pidana, dan hukum korporasi.';
+
     $seoDescription = trim(View::yieldContent('meta_description', $defaultDescription)) ?: $defaultDescription;
 
     $seoUrl = trim(View::yieldContent('canonical', url()->current())) ?: url()->current();
 
+    // OG image boleh tetap logo besar (untuk share), bukan favicon
     $defaultImage = asset('images/logo.png');
     $seoImage = trim(View::yieldContent('meta_image', $defaultImage)) ?: $defaultImage;
 
@@ -25,7 +27,14 @@
   <meta name="author" content="ASDM Associates">
 
   <title>{{ $seoTitle }}</title>
-  <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+
+  {{-- FAVICON (hapus logo.png sebagai favicon, pakai file favicon.io) --}}
+  <link rel="icon" href="{{ asset('favicon.ico') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+  <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+  <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+
   <meta name="description" content="{{ $seoDescription }}">
   <link rel="canonical" href="{{ $seoUrl }}">
 

@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Layanan Hukum di Balikpapan - Perdata, Pidana, Korporasi | ASDM Associates')
 
-@section('meta_description', 'Layanan konsultasi hukum, pendampingan litigasi, legal audit, dan penyusunan kontrak untuk individu maupun perusahaan di Balikpapan. Hubungi kami untuk konsultasi gratis!')
+@section(
+  'meta_description',
+  'Layanan hukum dan pengacara Balikpapan untuk konsultasi, litigasi, dan pendampingan hukum perusahaan.'
+)
 
 @section('canonical', route('services'))
 
