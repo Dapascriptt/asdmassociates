@@ -2,7 +2,7 @@
 
 @section(
   'title',
-  'Firma Hukum & Pengacara Balikpapan | ASDM Associates'
+  'Firma Hukum dan Pengacara Balikpapan | ASDM Associates'
 )
 
 @section(
