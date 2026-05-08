@@ -86,27 +86,6 @@
     </p>
   </div>
 
-  {{-- OUR PARTNER --}}
-  <p class="mt-4 text-xs font-semibold text-white/80 tracking-wide">
-    Our Partner
-  </p>
-
-  <div class="mt-1 flex items-start gap-2 text-sm text-white/70">
-    <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-4 w-4 shrink-0 text-white/60"
-         fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-            d="M19.5 10.5c0 7.5-7.5 10.5-7.5 10.5S4.5 18 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-    </svg>
-
-    <p class="leading-relaxed">
-      Office Jakarta: Belleza BSA, 1st Floor Unit 106,<br>
-      Jl. Letjen Soepeno, Kebayoran Lama,<br>
-      Jakarta Selatan
-    </p>
-  </div>
-</div>
 
 
     </div>
