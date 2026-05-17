@@ -2,12 +2,12 @@
 
 @section(
   'title',
-  'Firma Hukum dan Pengacara Balikpapan | ASDM Associates'
+  'Pengacara Balikpapan | ASDM Associates'
 )
 
 @section(
   'meta_description',
-  'ASDM Associates adalah firma hukum dan pengacara Balikpapan profesional yang menangani perkara perdata, pidana, dan hukum korporasi. Konsultasi gratis!'
+  'ASDM Associates adalah pengacara Balikpapan profesional yang menangani perkara perdata, pidana, dan hukum korporasi. Konsultasi gratis!'
 )
 
 @section('canonical', route('home'))
@@ -29,7 +29,7 @@
       <div class="text-white animate-[fadeInUp_0.8s_ease] max-w-3xl">
         <p class="text-base sm:text-lg lg:text-xl font-semibold tracking-wide">ASDM Associates</p>
         <h1 class="mt-1 sm:mt-2 text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
-          Firma Hukum Profesional Balikpapan
+          Pengacara Profesional Balikpapan
         </h1>
         <p class="mt-2 sm:mt-3 lg:mt-4 text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed">
           Pendampingan hukum yang tegas, terukur, dan berorientasi solusi bagi individu maupun korporasi.

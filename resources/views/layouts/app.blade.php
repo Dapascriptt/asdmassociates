@@ -10,7 +10,7 @@
 
     $seoTitle = trim(View::yieldContent('title', 'ASDM Associates')) ?: 'ASDM Associates';
 
-    $defaultDescription = 'ASDM Associates adalah firma hukum dan pengacara profesional di Balikpapan yang menangani perkara perdata, pidana, dan hukum korporasi.';
+    $defaultDescription = 'ASDM Associates adalah pengacara profesional di Balikpapan yang menangani perkara perdata, pidana, dan hukum korporasi.';
 
     $seoDescription = trim(View::yieldContent('meta_description', $defaultDescription)) ?: $defaultDescription;
 

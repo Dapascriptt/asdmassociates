@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Tentang Kami - Firma Hukum Profesional di Balikpapan | ASDM Associates')
-@section('meta_description', 'Kenali ASDM Associates, firma hukum di Balikpapan. Tim kami memberikan pendampingan hukum yang tegas, jelas, dan terdokumentasi untuk perkara perdata, pidana, dan korporasi.')
+@section('title', 'Tentang Kami - Pengacara Profesional di Balikpapan | ASDM Associates')
+@section('meta_description', 'Kenali ASDM Associates, pengacara di Balikpapan. Tim kami memberikan pendampingan hukum yang tegas, jelas, dan terdokumentasi untuk perkara perdata, pidana, dan korporasi.')
 @section('canonical', route('about'))
 @section('meta_image', $about?->hero_image ? asset('storage/' . ltrim($about->hero_image, '/')) : asset('images/about-og-image.jpg'))
 
