@@ -14,10 +14,9 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
-        // Use simple Bootstrap-style pagination HTML (ul.pagination > li > a)
+        // Use Bootstrap-style pagination HTML (ul.pagination > li > a)
         // that matches our custom admin CSS .pagination styles.
-        Paginator::defaultView('vendor.pagination.bootstrap-4');
-        Paginator::defaultSimpleView('vendor.pagination.simple-bootstrap-4');
+        Paginator::useBootstrapFour();
     }
 }
 
